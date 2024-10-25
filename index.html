@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Quality Prediction</title>
+</head>
+<body>
+    <h1>Air Quality Prediction Using Satellite Data</h1>
+    <form method="post">
+        <label for="humidity">Relative Humidity (%):</label>
+        <input type="text" id="humidity" name="humidity"><br><br>
+        <label for="temperature">Temperature (°C):</label>
+        <input type="text" id="temperature" name="temperature"><br><br>
+        <button type="submit">Predict AQI</button>
+    </form>
+    {% if prediction %}
+        <h2>Predicted Air Quality Index: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
